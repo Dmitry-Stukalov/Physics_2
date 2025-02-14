@@ -7,14 +7,13 @@ public class Bullet : MonoBehaviour
 {
 	private GameObject Center { get; set; }
 	private Vector3 targetDirection { get; set; }
-	private float rotationSpeed { get; set; } = 50f;
+	private float rotationSpeed { get; set; } = 50;
 
 	public float pi { get; set; } = 3.14f;
 	public float X { get; set; }
 	public float Y { get; set; }
 	public float Z { get; set; }
 	public float T { get; set; }									//Период в
-	public float Ti { get; set; }									//Сколько секунд прошло
 	public float A { get; set; }
 	public float S { get; set; }
 	public float R { get; set; }
@@ -73,10 +72,6 @@ public class Bullet : MonoBehaviour
 				X = Center.transform.position.x + R;
 				transform.position = new Vector3(X, Y, Z);
 				break;
-
-			case "A":
-				A = value;
-				break;
 		}
 
 	}
@@ -89,7 +84,7 @@ public class Bullet : MonoBehaviour
 				return T;
 
 			case "A":
-				return A;
+				return A%360;
 
 			case "W":
 				return W;
@@ -143,7 +138,7 @@ public class Bullet : MonoBehaviour
 			if (targetDirection != Vector3.zero)
 			{
 				Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up) * Quaternion.Euler(0, -90, 0);
-				transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+				transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Convert.ToSingle(rotationSpeed * Time.deltaTime));
 			}
 
 			gameObject.transform.position = new Vector3(X, Y, Z);
