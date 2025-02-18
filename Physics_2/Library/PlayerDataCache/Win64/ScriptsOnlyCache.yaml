@@ -102,6 +102,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -159,9 +161,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 22192}
     - Class: 114
-      Script: {instanceID: 22476}
+      Script: {instanceID: 22574}
     - Class: 114
-      Script: {instanceID: 22576}
+      Script: {instanceID: 22946}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1173,12 +1175,6 @@ ScriptsOnlyBuild:
     className: DropdownSample
   - hash:
       serializedVersion: 2
-      Hash: c437f4656c15f32207268583abd5d6a6
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StartButton
-  - hash:
-      serializedVersion: 2
       Hash: b30c8635462e66ac20f4241106119f77
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
@@ -1267,6 +1263,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: c437f4656c15f32207268583abd5d6a6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StartButton
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
